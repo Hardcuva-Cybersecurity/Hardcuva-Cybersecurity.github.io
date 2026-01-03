@@ -1,92 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hardcuva-Cybersecurity | Securing Web, Cloud & Web3</title>
-
-  <meta name="description" content="Hardcuva-Cybersecurity provides professional cybersecurity audits, cloud security, pentesting, and Web3 security services. Founded by Olóládé.">
-
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardcuva-Cybersecurity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="logo">
-      <!-- LOGO GOES HERE -->
-      <span>Hardcuva-Cybersecurity</span>
+<!-- HEADER -->
+<header>
+    <nav>
+        <div class="logo">
+            <!-- ADD LOGO IMAGE HERE -->
+            <img src="assets/images/logo.png" alt="Hardcuva-Cybersecurity Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Protecting Your Digital World</h1>
+        <p>We secure your web, cloud, and Web3 platforms with professional cybersecurity services.</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn primary-btn">Get Security Audit</a>
+            <a href="#services" class="btn secondary-btn">Our Services</a>
+        </div>
+        <!-- ADD HERO BACKGROUND IMAGE HERE -->
+        <div class="hero-image">
+            <img src="assets/images/hero-bg.png" alt="Cybersecurity Illustration">
+        </div>
     </div>
-  </header>
+</section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <!-- HERO BACKGROUND IMAGE GOES HERE -->
-    <h1>Securing the Digital Layer</h1>
-    <p>
-      Professional cybersecurity for web apps, cloud infrastructure, and Web3 systems.
-    </p>
-    <a href="#services" class="cta">View Services</a>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>About Hardcuva</h2>
-    <p>
-      Hardcuva-Cybersecurity is a security-first brand founded by <strong>Olóládé</strong>,
-      focused on identifying vulnerabilities before attackers do.
-      We work with startups, builders, and digital businesses to secure
-      applications, infrastructure, and decentralized systems.
-    </p>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <h2>Services</h2>
-
-    <div class="service-grid">
-      <div class="card">
-        <h3>Cybersecurity Audits</h3>
-        <p>Full security reviews of applications, systems, and configurations.</p>
-      </div>
-
-      <div class="card">
-        <h3>Penetration Testing</h3>
-        <p>Manual and automated testing to simulate real-world attacks.</p>
-      </div>
-
-      <div class="card">
-        <h3>Cloud Security</h3>
-        <p>Secure cloud infrastructure, IAM, storage, and deployments.</p>
-      </div>
-
-      <div class="card">
-        <h3>Web3 Security</h3>
-        <p>Smart contract reviews, dApp security, and blockchain threat analysis.</p>
-      </div>
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+    <h2>About Hardcuva-Cybersecurity</h2>
+    <p>Led by Olóládé, we provide top-tier cybersecurity solutions including audits, penetration testing, cloud security, and Web3 security assessments.</p>
+    <div class="about-stats">
+        <div class="stat">
+            <h3>50+</h3>
+            <p>Audits Completed</p>
+        </div>
+        <div class="stat">
+            <h3>20+</h3>
+            <p>Clients Secured</p>
+        </div>
+        <div class="stat">
+            <h3>10+</h3>
+            <p>Cloud & Web3 Projects</p>
+        </div>
     </div>
-  </section>
+    <!-- ADD ABOUT IMAGE OR GRAPHIC HERE -->
+    <div class="about-image">
+        <img src="assets/images/about.png" alt="About Hardcuva">
+    </div>
+</section>
 
-  <!-- PROCESS -->
-  <section class="process">
-    <h2>Engagement Process</h2>
-    <ol>
-      <li>Initial assessment & scope definition</li>
-      <li>Threat modeling & testing</li>
-      <li>Vulnerability reporting</li>
-      <li>Remediation guidance & validation</li>
-    </ol>
-  </section>
+<!-- SERVICES SECTION -->
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+        <div class="card">
+            <img src="assets/images/service-audit.png" alt="Cybersecurity Audit Icon">
+            <h3>Cybersecurity Audit</h3>
+            <p>Comprehensive assessment to identify vulnerabilities and risks.</p>
+        </div>
+        <div class="card">
+            <img src="assets/images/service-penetration.png" alt="Penetration Testing Icon">
+            <h3>Penetration Testing</h3>
+            <p>Simulated attacks to test your system defenses and response.</p>
+        </div>
+        <div class="card">
+            <img src="assets/images/service-cloud.png" alt="Cloud Security Icon">
+            <h3>Cloud Security Engineering</h3>
+            <p>Protect your cloud infrastructure with professional security solutions.</p>
+        </div>
+        <div class="card">
+            <img src="assets/images/service-web3.png" alt="Web3 Security Icon">
+            <h3>Web3 / Smart Contract Security</h3>
+            <p>Audit and secure blockchain applications and smart contracts.</p>
+        </div>
+    </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>
-      © 2026 Hardcuva-Cybersecurity  
-      <br>
-      Built & maintained by <strong>Olóládé</strong>
-    </p>
-  </footer>
+<!-- PROCESS SECTION -->
+<section id="process" class="process">
+    <h2>Our Engagement Process</h2>
+    <div class="process-steps">
+        <div class="step">
+            <h3>1</h3>
+            <p>Scope & Requirements Gathering</p>
+        </div>
+        <div class="step">
+            <h3>2</h3>
+            <p>Testing & Analysis</p>
+        </div>
+        <div class="step">
+            <h3>3</h3>
+            <p>Reporting & Recommendations</p>
+        </div>
+        <div class="step">
+            <h3>4</h3>
+            <p>Remediation & Validation</p>
+        </div>
+    </div>
+</section>
 
-  <script src="assets/js/main.js"></script>
+<!-- CONTACT FORM -->
+<section id="contact" class="contact">
+    <h2>Bring Your Security Ideas to Life</h2>
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Project Details"></textarea>
+        <label for="budget">Select Budget</label>
+        <select name="budget" id="budget" required>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+        <fieldset>
+            <legend>Select Required Services</legend>
+            <label><input type="checkbox" name="services" value="Cybersecurity Audit"> Cybersecurity Audit</label>
+            <label><input type="checkbox" name="services" value="Penetration Testing"> Penetration Testing</label>
+            <label><input type="checkbox" name="services" value="Cloud Security Engineering"> Cloud Security Engineering</label>
+            <label><input type="checkbox" name="services" value="Web3 Security"> Web3 / Smart Contract Security</label>
+        </fieldset>
+        <button type="submit" class="btn submit-btn">Submit</button>
+        <p class="form-message"></p>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="assets/images/logo-footer.png" alt="Hardcuva-Cybersecurity Logo">
+        </div>
+        <div class="footer-socials">
+            <a href="https://x.com/username" target="_blank">X</a>
+            <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+            <a href="https://github.com/username" target="_blank">GitHub</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
