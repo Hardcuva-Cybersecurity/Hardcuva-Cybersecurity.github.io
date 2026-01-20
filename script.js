@@ -1,74 +1,83 @@
-// Mobile Menu Toggle
-const mobileToggle = document.getElementById('mobileMenuToggle');
-const navLinks = document.querySelector('.nav-links');
+/* ==================================================
+   HARDCUVA-CYBERSECURITY
+   Subtle UX Enhancements
+   Author: Olóládé
+================================================== */
 
-if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = mobileToggle.querySelector('i');
-        if (icon.classList.contains('fa-bars')) {
-            icon.classList.replace('fa-bars', 'fa-times');
-        } else {
-            icon.classList.replace('fa-times', 'fa-bars');
-        }
-    });
+/* ------------------------------
+   MOBILE NAV TOGGLE
+------------------------------ */
+const menuToggle = document.getElementById("mobileMenuToggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 }
 
-// Smooth Scrolling for Anchor Links
+/* Close menu when link is clicked (mobile UX) */
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+/* ------------------------------
+   SMOOTH SCROLL (fallback-safe)
+------------------------------ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 90,
-                    behavior: 'smooth'
-                });
+  anchor.addEventListener("click", function (e) {
+    const target = document.querySelector(this.getAttribute("href"));
+    if (!target) return;
 
-                // Close mobile menu on click
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    mobileToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
-                }
-            }
-        }
+    e.preventDefault();
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
     });
+  });
 });
 
-// Navbar Background on Scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+/* ------------------------------
+   SCROLL REVEAL (lightweight)
+------------------------------ */
+const revealItems = document.querySelectorAll(
+  ".service-card, .stat-item, .process-step, .stack-item"
+);
+
+const revealOnScroll = () => {
+  const triggerPoint = window.innerHeight * 0.85;
+
+  revealItems.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < triggerPoint) {
+      item.classList.add("revealed");
     }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+/* ------------------------------
+   HEADER ELEVATION ON SCROLL
+------------------------------ */
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
 
-// Enhanced Form Submission Feedback
-const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
-
-if (form && status) {
-    form.addEventListener('submit', function () {
-        // Show sending state
-        status.textContent = 'Sending your message...';
-        status.style.color = '#007bff';
-        status.style.opacity = '1';
-
-        // Optional: Simulate success after delay (for testing without real submit)
-        // Remove this block when live
-        /*
-        setTimeout(() => {
-            status.textContent = 'Message sent successfully!';
-            status.style.color = '#28a745';
-            form.reset();
-            setTimeout(() => {
-                status.textContent = '';
-            }, 5000);
-        }, 1500);
-        */
-    });
-}
+/* ------------------------------
+   ACCESSIBILITY: ESC CLOSE MENU
+------------------------------ */
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    navLinks.classList.remove("active");
+  }
+});
